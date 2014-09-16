@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <div id="main-navbar"></div>
+
+    <!-- Main page content -->
+    <div id="main-container" class="container"></div>
+  
+    <div id="mask"></div>
+
+    <!-- Detail overlay -->
+    <div id="my-overlay">    
+      <div id="overlay-content" class="modal-content">
+        <div id="overlay-body" class="modal-body">
+          <div class="row">
+            <img id="overlay-poster" class="col-xs-12 col-sm-6" />
+            <div class="col-xs-12 col-sm-6">
+              <div id="overlay-cast"></div>
+              <div id="overlay-summary"></div>
+              <img id="youtube-button" class="social-icon" src="images/youtube.png" />
+              <img id="twitter-button" class="social-icon" src="images/twitter.png" />
+              <img id="facebook-button" class="social-icon" src="images/facebook.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

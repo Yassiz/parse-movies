@@ -1,0 +1,158 @@
+/*
+ * === Main page: Nav Bar and Card-based UI with poster images ===
+ */
+#main-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 47px;
+  background-color: rgba(50, 88, 117);
+  background-image: -webkit-linear-gradient(top, #517fa4, #306088);
+  box-shadow: 0px 3px 10px rgba(50, 50, 50, 0.75);
+  z-index: 900;
+}
+ 
+#main-container {
+  margin-top: 75px;
+  -webkit-transition: -webkit-transform 1000ms;
+}
+ 
+.card {
+  height: 200px;
+  margin-bottom: 25px;
+}
+ 
+.card-poster {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 3px 3px 15px;
+}
+
+.card-poster img {
+  width: 100%;
+}
+
+#mask {
+  position: fixed;
+  display: none;
+  opacity: .8;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+}
+
+/*
+ * === Overlay showing detailed view of a movie ===
+ */ 
+#my-overlay {
+  position: fixed;
+  width: 0;
+  left: 0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  z-index: 990;
+  max-width: 760px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#overlay {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  left: -9999px;
+  display: block;
+}
+ 
+.modal-dialog {
+  width: 95%;
+  margin: 20px auto;
+  max-width: 800px;  
+}
+ 
+#overlay-content {
+  -webkit-transition: all 500ms;
+  -webkit-transform: scale3d(.8,.8,.8);
+  overflow: hidden;
+}
+
+#overlay-poster {
+  cursor: pointer;
+  max-width: 500px;
+}
+ 
+#overlay-body {
+  padding: 0;
+}
+ 
+#overlay-cast {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: HelveticaNeue, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  max-height: 20px;
+  overflow: hidden;
+  color: #AAA;
+  margin-left: 10px;
+}
+ 
+#overlay-summary {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: HelveticaNeue-Light, sans-serif;
+  font-size: 16px;
+  padding-right: 30px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+ 
+#youtube-button {
+  margin-left: 10px;
+}
+ 
+.social-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 10px;
+}
+ 
+@media screen and (min-width: 768px) {
+  .modal-dialog {
+    margin: 80px auto;
+  }
+
+  #overlay-cast {
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-left: 0px;
+  }
+ 
+  #overlay-summary {
+    max-height: 295px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+ 
+  #youtube-button {
+    margin-left: 0px;
+  }
+ 
+  .social-icon {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #my-overlay {
+    max-width: 472px;
+    top: 0;
+  }
+}
+ 
